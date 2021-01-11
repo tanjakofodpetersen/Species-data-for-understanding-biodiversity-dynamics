@@ -28,6 +28,11 @@ library(iNEXT)
 
 ##--- 1. DATA RETRIEVAL ---####
 ##--- 1.1 GBIF data     ---####
+# Make R ask for you login credentials:
+options(gbif_user=rstudioapi::askForPassword("my gbif username"))
+options(gbif_email=rstudioapi::askForPassword("my registred gbif e-mail"))
+options(gbif_pwd=rstudioapi::askForPassword("my gbif password"))
+
 # "GBIF Occurrence Download 10.15468/dl.dmdxne accessed via GBIF.org on 2019-11-19"
 # GBIF download key:
 download_key_national <- occ_download(
